@@ -391,8 +391,8 @@ public final class GL_Service extends WallpaperService {
 	        //GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureID);
 	        long time = SystemClock.uptimeMillis() % 259000L;
 	        float ff[] = new float[1];
-	        ff[0] = (float)time/200.0f;
-	        x = (float)time/800.0f;
+	        ff[0] = (float)time/50.0f;
+	        x = (float)time/200.0f;
 	        GLES20.glVertexAttrib1f(aTime, (float)time );
 			GLES20.glUniform1fv(vTime , 1, ff, 0);
 			GLES20.glUniform2fv(uAspectRatio, 1, mAspectRatio, 0);
