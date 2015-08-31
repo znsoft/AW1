@@ -10,7 +10,7 @@ uniform float Time;
 void main( void )
 {
 float t = Time; 
-float x = uGyro.x/11.0;
+float x = uGyro.x/9.0;
 vec2 uv = (.2 + .05 * sin(x*1.1)) * gl_FragCoord.xy / 800.0 + .2 * vec2(2.2+1.*sin(x), .4+.4*cos(x*.9));
 for (int i=0; i<7; ++i) uv = abs(uv) / dot(uv,uv) -vec2(.81-.1*uv.y);
 gl_FragColor = vec4(uv*uv/10., (uv.y-uv.x)/10.,1.);
