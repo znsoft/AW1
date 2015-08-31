@@ -1,0 +1,17 @@
+uniform vec2 uAspectRatio;
+attribute vec2 aPosition;
+attribute float aTime;
+varying vec2 vPos;
+varying float vGrad;
+varying float vTime;
+
+uniform sampler2D sTexture;
+
+
+
+void main() {
+	gl_Position = vec4(aPosition, 0.0, 1.0);
+	vPos = aPosition * uAspectRatio;
+	vGrad = (vPos.y + 1.0) * 0.15;
+	//vTime = aTime;
+}
